@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRA Salon - Luxury Hair & Beard Styling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Hero Section with Enhanced Parallax -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo-container">
+                        <img src="logo.jpeg" alt="MRA Salon Logo" class="logo" shape-outside="circle(50%)">
+                        <div class="salon-name">MRA SALON</div>
+                    </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#styles" class="nav-link">Styles</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#book" class="nav-link">Book</a></li>
+                    <li><a href="https://www.instagram.com/mrasalonofficial/" class="nav-link instagram-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">MRA Luxury Salon</h1>
+            <p class="hero-subtitle fade-in">Gold Standard in Men's Grooming & Hairstyling</p>
+            <a href="#book" class="cta-btn gold-btn fade-in">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Haircut Styles Section (8 Categories) -->
+    <section class="styles-section" id="styles">
+        <div class="container">
+            <h2 class="section-title gold-text">Our Signature Styles</h2>
+            <div class="styles-grid">
+                <div class="style-card fade-in" data-service="Curly Hairstyle">
+                    <img src="Curly_Hairstyle_hannusaraf_480x480.webp" alt="Curly Hairstyle">
+                    <h3>Curly</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Long Wavy">
+                    <img src="Long_and_Wavy_Hairstyle_Bhuvan_Bam_480x480.webp" alt="Long Wavy Hairstyle">
+                    <h3>Long Wavy</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Man Bun">
+                    <img src="Man_Bun_Hairstyle_480x480.webp" alt="Man Bun Hairstyle">
+                    <h3>Man Bun</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Medium Curls">
+                    <img src="Medium_Length_Curls_for_Indian_Men_480x480.webp" alt="Medium Curls">
+                    <h3>Medium Curls</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Messy Quiff">
+                    <img src="Messy_Quiff_with_Moustache_for_Men_with_Oval_Face_480x480.webp" alt="Messy Quiff">
+                    <h3>Messy Quiff</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Pompadour">
+                    <img src="Pompadour_Hairstyle_Ranveer_Singh_480x480.webp" alt="Pompadour Hairstyle">
+                    <h3>Pompadour</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Ponytail">
+                    <img src="Ponytail_Hairstyle_for_Men_with_Beard_480x480.webp" alt="Ponytail Hairstyle">
+                    <h3>Ponytail</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+                <div class="style-card fade-in" data-service="Short Quiff">
+                    <img src="Short_Quiff_Faded_Without_Beard_For_Indian_Men_480x480.webp" alt="Short Quiff">
+                    <h3>Short Quiff</h3>
+                    <button class="view-btn gold-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title gold-text">Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="hair-dye-men-salon-800x534.webp" alt="Premium Haircut Service">
+                    <h3>Haircut</h3>
+                    <div class="price">₹50-200 <br>
+                        <p>+20% online charges</p></div>
+                    <button class="book-btn gold-btn" data-service="Haircut">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="cutting-beard-barber-salon.avif" alt="Expert Beard Trim">
+                    <h3>Beard Trim</h3>
+                    <div class="price">₹20-50 <br>
+                        <p>+20% onlinecharges</p></div>
+                    <button class="book-btn gold-btn" data-service="Beard Trim">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="hair-dye-men-salon-800x534.webp" alt="Professional Hair Dye">
+                    <h3>Hair Dye</h3>
+                    <div class="price">₹100-250 <br>
+                        <p>+20% online charges</p></div>
+                    <button class="book-btn gold-btn" data-service="Hair Dye">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="facial.webp" alt="Luxury Facial Treatment">
+                    <h3>Facial</h3>
+                    <div class="price">₹100-600 <br>
+                        <p>+20% online charges</p></div>
+                    <button class="book-btn gold-btn" data-service="Facial">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-section" id="book">
+        <div class="container">
+            <h2 class="section-title gold-text">Direct Booking</h2>
+            <form id="bookingForm" class="booking-form">
+                <input type="text" id="name" placeholder="Full Name *" required>
+                <input type="tel" id="phone" placeholder="Phone Number *" required>
+                <input type="email" id="email" placeholder="Email Address">
+                <select id="service" required>
+                    <option value="">Select Service *</option>
+                    <option value="Haircut">Haircut</option>
+                    <option value="Beard Trim">Beard Trim</option>
+                    <option value="Hair Dye">Hair Dye</option>
+                    <option value="Facial">Facial</option>
+                    <option value="Style Consultation">Style Consultation</option>
+                </select>
+                <input type="date" id="date" required>
+                <textarea id="message" placeholder="Special Requests / Preferred Stylist" rows="4"></textarea>
+                <div class="form-buttons">
+                    <button type="button" id="whatsappBtn" class="gold-btn"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                    <button type="button" id="emailBtn" class="gold-btn"><i class="fas fa-envelope"></i> Email</button>
+                    <button type="submit" class="gold-btn" id="submitBtn">Submit Booking</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title gold-text">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Long_and_Wavy_Haircut_with_Beard_2_480x480.webp" alt="Long Wavy Haircut with Beard">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Long_Layered_Hairstyles_Men_for_Oval_Face_480x480.webp" alt="Long Layered Hairstyle for Oval Face">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Messy_Curls_for_Indian_Men_with_Round_Face_480x480.webp" alt="Messy Curls for Round Face">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Side_Part_Pompadour_Haircut_without_Beard_0e46cf4f-73c6-49e9-972a-592de7f892fe_480x480.webp" alt="Side Part Pompadour Haircut">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Slicked_Back_Hairstyle_480x480.webp" alt="Slicked Back Hairstyle">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Spiky_Haircut_for_Men_480x480.jpg" alt="Spiky Haircut">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MRA Luxury Salon. All rights reserved. | Email: info@mrasalon.com | Phone: +91-8923568275</p>
+        </div>
+    </footer>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div id="modalPrice"></div>
+            <button id="modalBookBtn" class="gold-btn">Book This Service</button>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Thanks Modal -->
+    <div id="thanksModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p id="thanksMessage">Your booking request has been saved and sent to our team.</p>
+            <button class="close-modal gold-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
