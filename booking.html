@@ -1,0 +1,30 @@
+<link rel='stylesheet' href='styles.css'>
+
+<nav>
+<div>MRA Salon</div>
+<div>
+<a href="index.html">Home</a>
+<a href="booking.html">Book</a>
+<a href="admin.html">Admin</a>
+</div>
+</nav>
+
+<div class='container'>
+<h2>Book Appointment</h2>
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Name" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<input type="date" id="date" required>
+<select id="time" required>
+<option>10:00</option>
+<option>11:00</option>
+<option>12:00</option>
+</select>
+<select id="service" required>
+<option>Haircut</option>
+<option>Beard</option>
+</select>
+<button type="submit">Submit Booking</button>
+</form>
+</div>
+<script src="script.js"></script>
