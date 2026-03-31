@@ -1,19 +1,24 @@
-// Full fixed script.js - WhatsApp booking fixed
-
-// WhatsApp Booking Function
+// ✅ WhatsApp Booking Function
 function sendWhatsAppBooking() {
     if (validateForm()) {
+
         const name = document.getElementById('name').value;
-const phoneNum = document.getElementById('phone').value;
-const email = document.getElementById('email').value;
-const service = document.getElementById('service').value;
-const date = document.getElementById('date').value;
-const time = document.getElementById('time').value;
-const message = document.getElementById('message').value || 'None';
+        const phoneNum = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const service = document.getElementById('service').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const message = document.getElementById('message').value || 'None';
 
-const whatsappPhone = '918923568275';
+        // ✅ Basic phone validation
+        if (phoneNum.length < 10) {
+            alert("Enter valid phone number");
+            return;
+        }
 
-const text = `🚀 MRA SALON - New Booking Request
+        const whatsappPhone = '918923568275';
+
+        const text = `🚀 MRA SALON - New Booking Request
 
 👤 Name: ${name}
 📞 Phone: ${phoneNum}
@@ -23,33 +28,36 @@ const text = `🚀 MRA SALON - New Booking Request
 ⏰ Time: ${time}
 💬 Notes: ${message}`;
 
-window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
-
-// Local save
-saveBooking();
-        
+        // ✅ Open WhatsApp
         window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
-        
-        // Local save
+
+        // ✅ Save booking locally
         saveBooking();
+
+        // ✅ Show success
         showThanks('Booking sent to WhatsApp! Check your WhatsApp.');
+
+        // ✅ Reset form
         document.getElementById('bookingForm').reset();
     }
 }
 
-// Form validation
+// ✅ Form Validation
 function validateForm() {
-const required = ['name', 'phone', 'service', 'date', 'time'];
+    const required = ['name', 'phone', 'service', 'date', 'time'];
 
     for (let field of required) {
         const input = document.getElementById(field);
+
         if (!input.value.trim()) {
             input.style.borderColor = '#ff4444';
             input.style.boxShadow = '0 0 10px rgba(255,68,68,0.3)';
+
             setTimeout(() => {
                 input.style.borderColor = '';
                 input.style.boxShadow = '';
-            }, 3000);
+            }, 2000);
+
             alert(`Please fill ${field}`);
             input.focus();
             return false;
@@ -58,7 +66,7 @@ const required = ['name', 'phone', 'service', 'date', 'time'];
     return true;
 }
 
-// Local storage save
+// ✅ Save to Local Storage
 function saveBooking() {
     const booking = {
         name: document.getElementById('name').value,
@@ -66,7 +74,8 @@ function saveBooking() {
         email: document.getElementById('email').value || '',
         service: document.getElementById('service').value,
         date: document.getElementById('date').value,
-        message: document.getElementById('message').value,
+        time: document.getElementById('time').value,
+        message: document.getElementById('message').value || '',
         timestamp: new Date().toLocaleString('en-IN')
     };
 
@@ -75,16 +84,20 @@ function saveBooking() {
     localStorage.setItem('mraBookings', JSON.stringify(bookings));
 }
 
-// Thanks modal
+// ✅ Thanks Modal
 function showThanks(msg) {
-    document.getElementById('thanksMessage').textContent = msg;
-    document.getElementById('thanksModal').style.display = 'block';
+    const modal = document.getElementById('thanksModal');
+    const message = document.getElementById('thanksMessage');
+
+    if (modal && message) {
+        message.textContent = msg;
+        modal.style.display = 'block';
+    }
 }
 
-// Modal close
-document.querySelectorAll('.close, .close-modal').forEach(close => {
-    close.addEventListener('click', () => {
-
+// ✅ Close Modal
+document.querySelectorAll('.close, .close-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.style.display = 'none';
         });
@@ -99,111 +112,94 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Navbar functionality
+// ✅ Navbar Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
+// ✅ Close menu on click
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        hamburger?.classList.remove('active');
+        navMenu?.classList.remove('active');
     });
 });
 
-// Navbar active state
-// Navbar active state - moved to load
-
-// Lightbox functionality for photo popups
+// ✅ Lightbox
 function openLightbox(imgSrc, imgAlt) {
     const modal = document.getElementById('lightboxModal');
-    const lightboxImg = document.getElementById('lightboxImg');
-    if (modal && lightboxImg) {
-        lightboxImg.src = imgSrc;
-        lightboxImg.alt = imgAlt;
+    const img = document.getElementById('lightboxImg');
+
+    if (modal && img) {
+        img.src = imgSrc;
+        img.alt = imgAlt;
         modal.style.display = 'block';
     }
 }
 
-// Event delegation for gallery items (works on current and dynamic content)
+// ✅ Image click handler
 document.addEventListener('click', function(e) {
-    if (e.target.closest('.gallery-item') || e.target.closest('.style-card img')) {
-        e.preventDefault();
-        const img = e.target.closest('.gallery-item, .style-card')?.querySelector('img') || e.target;
-        if (img && img.src) {
+    const item = e.target.closest('.gallery-item, .style-card');
+
+    if (item) {
+        const img = item.querySelector('img');
+        if (img) {
             openLightbox(img.src, img.alt);
         }
     }
 });
 
-
-
-// Preloader
+// ✅ Preloader
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0';
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, 500);
+    if (preloader) {
+        preloader.style.opacity = '0';
+        setTimeout(() => preloader.style.display = 'none', 500);
+    }
 });
 
-// Service Modal (for other pages) - Fixed with logs
+// ✅ Service Modal
 window.addEventListener('load', function() {
 
+    const services = {
+        'Haircut': { desc: 'Premium haircut with styling consultation.', price: '₹500-1500' },
+        'Beard Trim': { desc: 'Expert beard grooming.', price: '₹300-800' },
+        'Hair Dye': { desc: 'Professional hair coloring.', price: '₹1000-2500' },
+        'Facial': { desc: 'Deep cleansing facial.', price: '₹600-1200' },
+        'Style Consultation': { desc: 'Personal styling advice.', price: '₹300' }
+    };
 
     document.querySelectorAll('.view-btn, .book-btn').forEach(btn => {
 
         btn.addEventListener('click', (e) => {
-            // First open photo lightbox for style card
             e.preventDefault();
-            
-            const card = btn.closest('.style-card');
-            if (card) {
-                const img = card.querySelector('img');
-                if (img) {
-                    openLightbox(img.src, img.alt);
-                    return;
-                }
-            }
-            
+
             const serviceName = btn.dataset.service;
+            const data = services[serviceName] || { desc: 'Premium service', price: 'Contact Us' };
 
-            const services = {
-                'Haircut': { desc: 'Premium haircut with styling consultation.', price: '₹500-1500' },
-                'Beard Trim': { desc: 'Expert beard shaping and grooming.', price: '₹300-800' },    
-                'Hair Dye': { desc: 'Professional color application with aftercare.', price: '₹1000-2500' },
-                'Facial': { desc: 'Luxury facial treatment for deep cleansing.', price: '₹600-1200' },
-'Style Consultation': { desc: 'Personalized style advice session.', price: '₹300' },        
-                'Curly Hairstyle': { desc: 'Perfect curls with premium styling.', price: '₹800-1500' },
-                'Long Wavy': { desc: 'Elegant long wavy haircut.', price: '₹1000-2000' },
-                'Man Bun': { desc: 'Modern man bun styling.', price: '₹700-1200' },
-                'Pompadour': { desc: 'Classic pompadour with volume.', price: '₹900-1600' },
-                'Medium Curls': { desc: 'Medium length curls maintenance.', price: '₹600-1100' },
-                'Messy Quiff': { desc: 'Trendy messy quiff look.', price: '₹800-1400' },
-                'Ponytail': { desc: 'Sophisticated ponytail styling.', price: '₹500-1000' },
-                'Short Quiff': { desc: 'Clean short quiff fade.', price: '₹500-900' }
-            };
-            const data = services[serviceName] || { desc: 'Premium service.', price: 'Contact Us' };
-            
-            document.getElementById('modalTitle').textContent = serviceName;
-            document.getElementById('modalDesc').textContent = data.desc;
-            document.getElementById('modalPrice').textContent = data.price;
-            document.getElementById('serviceModal').style.display = 'block';
+            const modal = document.getElementById('serviceModal');
 
+            if (modal) {
+                document.getElementById('modalTitle').textContent = serviceName;
+                document.getElementById('modalDesc').textContent = data.desc;
+                document.getElementById('modalPrice').textContent = data.price;
+
+                modal.style.display = 'block';
+            }
         });
     });
-    
-    // Modal Book button handler
-    const modalBookBtn = document.getElementById('modalBookBtn');
-    if (modalBookBtn) {
 
+    const modalBookBtn = document.getElementById('modalBookBtn');
+
+    if (modalBookBtn) {
         modalBookBtn.addEventListener('click', () => {
             const serviceName = document.getElementById('modalTitle').textContent;
-
             localStorage.setItem('selectedService', serviceName);
             window.location.href = 'book.html';
         });
