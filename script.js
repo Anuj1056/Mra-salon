@@ -4,15 +4,29 @@
 function sendWhatsAppBooking() {
     if (validateForm()) {
         const name = document.getElementById('name').value;
-        const phoneNum = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
-        const service = document.getElementById('service').value;
-        const date = document.getElementById('date').value;
-        const time = document.getElementById('time').value;
-        const message = document.getElementById('message').value || 'None';
-        
-        const whatsappPhone = '918923568275'; // +91 8923568275
-        const text = `🚀 MRA SALON - New Booking Request\n\n👤 Name: ${name}\n📞 Phone: ${phoneNum}\n✉️ Email: ${email}\n✂️ Service: ${service}\n📅 Date: ${date}\n🕐 Time: ${time}\n💬 Notes: ${message}`;
+const phoneNum = document.getElementById('phone').value;
+const email = document.getElementById('email').value;
+const service = document.getElementById('service').value;
+const date = document.getElementById('date').value;
+const time = document.getElementById('time').value;
+const message = document.getElementById('message').value || 'None';
+
+const whatsappPhone = '918923568275';
+
+const text = `🚀 MRA SALON - New Booking Request
+
+👤 Name: ${name}
+📞 Phone: ${phoneNum}
+✉️ Email: ${email}
+✂️ Service: ${service}
+📅 Date: ${date}
+⏰ Time: ${time}
+💬 Notes: ${message}`;
+
+window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
+
+// Local save
+saveBooking();
         
         window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
         
