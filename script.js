@@ -11,7 +11,7 @@ function sendWhatsAppBooking() {
         const time = document.getElementById('time').value;
         const message = document.getElementById('message').value || 'None';
         
-        const whatsappPhone = '8923568275'; // +91 8923568275
+        const whatsappPhone = '+91-8923568275'; // +91 8923568275
         const text = `🚀 MRA SALON - New Booking Request\n\n👤 Name: ${name}\n📞 Phone: ${phoneNum}\n✉️ Email: ${email}\n✂️ Service: ${service}\n📅 Date: ${date}\n🕐 Time: ${time}\n💬 Notes: ${message}`;
         
         window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
