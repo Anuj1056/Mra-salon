@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MRA Salon - Luxury Hair & Beard Styling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="MRA Salon Logo" class="logo">
+                <div class="salon-name">MRA SALON</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="styles.html" class="nav-link">Styles</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="book.html" class="nav-link">Book</a></li>
+                <li><a href="https://www.instagram.com/mrasalonofficial/" class="nav-link instagram-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title gold-text">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Long_and_Wavy_Haircut_with_Beard_2_480x480.webp" alt="Long Wavy Haircut with Beard">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Long_Layered_Hairstyles_Men_for_Oval_Face_480x480.webp" alt="Long Layered Hairstyle for Oval Face">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Messy_Curls_for_Indian_Men_with_Round_Face_480x480.webp" alt="Messy Curls for Round Face">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Side_Part_Pompadour_Haircut_without_Beard_0e46cf4f-73c6-49e9-972a-592de7f892fe_480x480.webp" alt="Side Part Pompadour Haircut">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Slicked_Back_Hairstyle_480x480.webp" alt="Slicked Back Hairstyle">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery">
+                    <img src="Spiky_Haircut_for_Men_480x480.jpg" alt="Spiky Haircut">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MRA Luxury Salon. All rights reserved. | Email: info@mrasalon.com | Phone: +91-8923568275</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - MRA Salon - Luxury Hair & Beard Styling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+ 
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="MRA Salon Logo" class="logo">
+                <div class="salon-name">MRA SALON</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+<li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="styles.html" class="nav-link">Styles</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="book.html" class="nav-link">Book</a></li>
+                <li><a href="https://www.instagram.com/mrasalonofficial/" class="nav-link instagram-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title gold-text">Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="hair-dye-men-salon-800x534.webp" alt="Premium Haircut Service">
+                    <h3>Haircut</h3>
+                    <div class="price">₹50-150 <br>
+                        <p>Premium styling included</p></div>
+                    <button class="book-btn gold-btn" data-service="Haircut">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="cutting-beard-barber-salon.avif" alt="Expert Beard Trim">
+                    <h3>Beard Trim</h3>
+                    <div class="price">₹20-50 <br>
+                        <p>Expert grooming</p></div>
+                    <button class="book-btn gold-btn" data-service="Beard Trim">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="hair-dye-men-salon-800x534.webp" alt="Professional Hair Dye">
+                    <h3>Hair Dye</h3>
+                    <div class="price">₹100-500 <br>
+                        <p>Professional color</p></div>
+                    <button class="book-btn gold-btn" data-service="Hair Dye">Book Now</button>
+                </div>
+                <div class="service-card fade-in">
+                    <img src="facial.webp" alt="Luxury Facial Treatment">
+                    <h3>Facial</h3>
+                    <div class="price">₹100-600 <br>
+                        <p>Luxury treatment</p></div>
+                    <button class="book-btn gold-btn" data-service="Facial">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MRA Luxury Salon. All rights reserved. | Email: info@mrasalon.com | Phone: +91-8923568275</p>
+        </div>
+    </footer>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div id="modalPrice"></div>
+            <button id="modalBookBtn" class="gold-btn">Book Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

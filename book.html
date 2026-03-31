@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - MRA Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="MRA Salon Logo" class="logo">
+                <div class="salon-name">MRA SALON</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="styles.html" class="nav-link">Styles</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="book.html" class="nav-link active">Book</a></li>
+                <li><a href="https://www.instagram.com/mrasalonofficial/" class="nav-link instagram-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Form -->
+    <section class="booking-section" id="book">
+        <div class="container">
+            <h2 class="section-title gold-text">Direct Booking</h2>
+            <form id="bookingForm" class="booking-form">
+                <input type="text" id="name" placeholder="Full Name *" required>
+                <input type="tel" id="phone" placeholder="Phone Number *" required>
+                <input type="email" id="email" placeholder="Email Address">
+                <select id="service" required>
+                    <option value="">Select Service *</option>
+                    <option value="Haircut">Haircut</option>
+                    <option value="Beard Trim">Beard Trim</option>
+                    <option value="Hair Dye">Hair Dye</option>
+                    <option value="Facial">Facial</option>
+                    <option value="Haircut+Beard Trim">Haircut + Beard Trim</option>
+                    <option value="Style Consultation">Style Consultation</option>
+                </select>
+<input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <textarea id="message" placeholder="Special Requests / Preferred Stylist" rows="4"></textarea>
+
+                <div class="form-buttons">
+<button type="button" class="gold-btn" id="whatsappBtn" onclick="sendWhatsAppBooking()"><i class="fab fa-whatsapp"></i> WhatsApp Booking</button>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MRA Luxury Salon. All rights reserved. | Email: info@mrasalon.com | Phone: +91-8923568275</p>
+        </div>
+    </footer>
+
+    <!-- Thanks Modal -->
+    <div id="thanksModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p id="thanksMessage">Your booking request has been saved and sent to our team.</p>
+            <button class="close-modal gold-btn">Close</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+<script>
+// Prefill service from modal
+document.addEventListener('DOMContentLoaded', function() {
+    const selectedService = localStorage.getItem('selectedService');
+    if (selectedService && document.getElementById('service')) {
+        document.getElementById('service').value = selectedService;
+
+        localStorage.removeItem('selectedService');
+    }
+});
+</script>
+
+</body>
+</html>
