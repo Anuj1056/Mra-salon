@@ -29,7 +29,13 @@ function sendWhatsAppBooking() {
 💬 Notes: ${message}`;
 
         // ✅ Open WhatsApp
-        window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`, '_blank');
+        const url = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`;
+
+try {
+    window.location.href = `intent://${url.replace('https://', '')}#Intent;scheme=https;package=com.whatsapp;end`;
+} catch (e) {
+    window.open(url, '_blank');
+}
 
         // ✅ Save booking locally
         saveBooking();
