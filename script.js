@@ -30,11 +30,7 @@ function sendWhatsAppBooking() {
 
         // ✅ Open WhatsApp
         const url = `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(text)}`;
-
-try {
-    window.location.href = `intent://${url.replace('https://', '')}#Intent;scheme=https;package=com.whatsapp;end`;
-} catch (e) {
-    window.open(url, '_blank');
+window.location.href = `intent://${url.replace('https://', '')}#Intent;scheme=https;package=com.whatsapp;end`;
 }
 
         // ✅ Save booking locally
