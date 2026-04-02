@@ -34,34 +34,8 @@ body {
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Loading Preloader */
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--black);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5000;
-    transition: opacity 0.5s;
-}
 
-.spinner {
-    width: 80px;
-    height: 80px;
-    border: 5px solid rgba(212,175,55,0.2);
-    border-top: 5px solid var(--gold);
-    border-radius: 50%;
-    /* animation: spin 1s linear infinite; */
-}
 
-/* @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-} */
 
 /* Custom Cursor */
 
