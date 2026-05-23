@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - MRA Salon - Luxury Hair & Beard Styling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="MRA Salon Logo" class="logo">
+                <div class="salon-name">MRA SALON</div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="styles.html" class="nav-link">Styles</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="book.html" class="nav-link">Book</a></li>
+                <li><a href="https://www.instagram.com/mrasalonofficial/" class="nav-link instagram-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+<!-- Gallery -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 class="section-title gold-text">Gallery</h2>
+                <button type="button" id="addPhotoBtn" class="add-photo-btn" aria-label="Add Photo">
+                    <i class="fa-solid fa-plus"></i> Add Photo
+                </button>
+                <input id="galleryFileInput" type="file" accept="image/*" style="display:none" />
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="1.jpeg" alt="Salon Interior">
+                </div>
+
+
+
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="2.jpeg" alt="Salon Interior">
+                </div>
+
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.32 PM.jpeg" alt="Salon Interior">
+                </div>
+
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.33 PM.jpeg" alt="Salon Interior">
+                </div>
+
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.34 PM.jpeg" alt="Salon Interior">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.35 PM.jpeg" alt="Salon Interior">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.37 PM.jpeg" alt="Salon Interior">
+                </div>
+                <div class="gallery-item fade-in" data-lightbox="gallery" data-removable="false">
+                    <img src="WhatsApp Image 2026-05-02 at 1.04.38 PM.jpeg" alt="Salon Interior">
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 MRA Luxury Salon. All rights reserved. | Email: info@mrasalon.com | Phone: +91-8923568275</p>
+            <p style="margin-top: 0.75rem; font-size: 1.1rem; opacity: 0.95;">
+                <a href="https://g.page/r/Ca-ZBIaewTPIEBM" target="_blank" rel="noopener" style="color: var(--neon-gold); text-decoration: none; font-weight: 700;">
+                    Leave us a Google Review
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal lightbox-modal">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <img id="lightboxImg" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
